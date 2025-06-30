@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     federation({
       remotes: {
-        music: "music@https://music-mfe.vercel.app/assets/remoteEntry.js",
+        music: "https://music-mfe.vercel.app/assets/remoteEntry.js",
         // add 5174/assets/remoteEntry.js
        // music@http://localhost:5174/assets/remoteEntry.js'
       },
