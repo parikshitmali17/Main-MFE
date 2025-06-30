@@ -27,7 +27,7 @@
       const isLocalhost = location.hostname === 'localhost';
       const remoteUrl = isLocalhost
         ? 'http://localhost:5174/assets/remoteEntry.js' // ✅ dev mode
-        : '@https://music-mfe.vercel.app/assets/remoteEntry.js'; // ✅ production
+        : 'https://music-mfe.vercel.app/assets/remoteEntry.js'; // ✅ production
 
       import(remoteUrl)
         .then(() => {
