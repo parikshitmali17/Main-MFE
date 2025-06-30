@@ -1,10 +1,4 @@
 
-
-
-
-
-"use client"
-
 import {
   Box,
   Container,
@@ -501,24 +495,8 @@ export default function LandingPage({ login }) {
                   alignItems: "center",
                 }}
               >
-                {/* Main Hero Image */}
-                {/* <Box
-                  component="img"
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Music streaming experience"
-                  sx={{
-                    width: "100%",
-                    maxWidth: 400,
-                    height: "auto",
-                    borderRadius: 4,
-                    boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
-                    transform: "perspective(1000px) rotateY(-5deg)",
-                    transition: "transform 0.3s ease",
-                    "&:hover": {
-                      transform: "perspective(1000px) rotateY(0deg) scale(1.02)",
-                    },
-                  }}
-                /> */}
+            
+               
 
                 {/* Floating Play Button */}
                 <IconButton
@@ -577,61 +555,6 @@ export default function LandingPage({ login }) {
         </Container>
       </Box>
 
-      {/* Features Section */}
-      {/* <Box sx={{ py: 8, bgcolor: "background.default" }}>
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: "center", mb: 6 }}>
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                mb: 2,
-                background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Why Choose SoundWave?
-            </Typography>
-            <Typography variant="h6" color="text.secondary">
-              Experience music streaming like never before
-            </Typography>
-          </Box>
-
-          <Grid container spacing={4}>
-            {features.map((feature, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
-                <Card
-                  sx={{
-                    height: "100%",
-                    textAlign: "center",
-                    p: 3,
-                    border: "1px solid",
-                    borderColor: "divider",
-                    "&:hover": {
-                      transform: "translateY(-8px)",
-                      boxShadow: "0 12px 40px rgba(0, 0, 0, 0.1)",
-                      borderColor: "primary.main",
-                    },
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  <CardContent>
-                    <Box sx={{ mb: 2 }}>{feature.icon}</Box>
-                    <Typography variant="h6" sx={{ mb: 2, fontWeight: "bold" }}>
-                      {feature.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {feature.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box> */}
 
       <Box
   sx={{
