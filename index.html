@@ -11,7 +11,7 @@
         <!-- main-app/index.html -->
 <!-- <script type="module" src="http://localhost:5174/assets/remoteEntry.js"></script>
     <script type="module" src="/src/main.jsx"></script> -->
-     <script type="module">
+     <!-- <script type="module">
       import('http://localhost:5174/assets/remoteEntry.js')
         .then(() => {
           console.log('✅ remoteEntry.js loaded');
@@ -19,6 +19,22 @@
           import('/src/main.jsx');
         })
         .catch((err) => {
+          console.error('❌ Failed to load remoteEntry.js', err);
+        });
+    </script> -->
+
+     <script type="module">
+      const isLocalhost = location.hostname === 'localhost';
+      const remoteUrl = isLocalhost
+        ? 'http://localhost:5174/assets/remoteEntry.js' // ✅ dev mode
+        : '@https://music-mfe.vercel.app/assets/remoteEntry.js'; // ✅ production
+
+      import(remoteUrl)
+        .then(() => {
+          console.log('✅ remoteEntry.js loaded from', remoteUrl);
+          return import('/src/main.jsx');
+        })
+        .catch(err => {
           console.error('❌ Failed to load remoteEntry.js', err);
         });
     </script>
