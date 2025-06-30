@@ -578,7 +578,7 @@ export default function LandingPage({ login }) {
       </Box>
 
       {/* Features Section */}
-      <Box sx={{ py: 8, bgcolor: "background.default" }}>
+      {/* <Box sx={{ py: 8, bgcolor: "background.default" }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: "center", mb: 6 }}>
             <Typography
@@ -631,7 +631,80 @@ export default function LandingPage({ login }) {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
+
+      <Box
+  sx={{
+    py: 8,
+    bgcolor: "background.default",
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <Container maxWidth="lg">
+    <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: "bold",
+          mb: 2,
+          background: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+          backgroundClip: "text",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+      >
+        Why Choose SoundWave?
+      </Typography>
+      <Typography variant="h6" color="text.secondary">
+        Experience music streaming like never before
+      </Typography>
+    </Box>
+
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: 4,
+      }}
+    >
+      {features.map((feature, index) => (
+        <Card
+          key={index}
+          sx={{
+            width: { xs: "100%", sm: "45%", md: "22%" },
+            textAlign: "center",
+            p: 3,
+            border: "1px solid",
+            borderColor: "divider",
+            borderRadius: 2,
+            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.05)",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              transform: "translateY(-8px)",
+              boxShadow: "0 12px 40px rgba(0, 0, 0, 0.1)",
+              borderColor: "primary.main",
+            },
+          }}
+        >
+          <CardContent>
+            <Box sx={{ mb: 2 }}>{feature.icon}</Box>
+            <Typography variant="h6" sx={{ mb: 2, fontWeight: "bold" }}>
+              {feature.title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {feature.description}
+            </Typography>
+          </CardContent>
+        </Card>
+      ))}
+    </Box>
+  </Container>
+</Box>
+
 
       {/* CTA Section */}
       <Box
