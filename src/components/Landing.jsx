@@ -502,7 +502,7 @@ export default function LandingPage({ login }) {
                 }}
               >
                 {/* Main Hero Image */}
-                <Box
+                {/* <Box
                   component="img"
                   src="/placeholder.svg?height=400&width=400"
                   alt="Music streaming experience"
@@ -518,7 +518,7 @@ export default function LandingPage({ login }) {
                       transform: "perspective(1000px) rotateY(0deg) scale(1.02)",
                     },
                   }}
-                />
+                /> */}
 
                 {/* Floating Play Button */}
                 <IconButton
