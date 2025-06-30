@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+        <!-- main-app/index.html -->
+<!-- <script type="module" src="http://localhost:5174/assets/remoteEntry.js"></script>
+    <script type="module" src="/src/main.jsx"></script> -->
+     <script type="module">
+      import('http://localhost:5174/assets/remoteEntry.js')
+        .then(() => {
+          console.log('✅ remoteEntry.js loaded');
+          // ✅ Step 2: only now start your main app
+          import('/src/main.jsx');
+        })
+        .catch((err) => {
+          console.error('❌ Failed to load remoteEntry.js', err);
+        });
+    </script>
+
+
+  </body>
+</html>
